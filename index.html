@@ -9,22 +9,35 @@
 </head>
 <body>
     <div class="container mt-5">
-        <h1 class="text-center mb-4">To-Do List</h1>
-        <div class="card shadow-sm">
-            <div class="card-body">
-                <div class="input-group mb-3">
-                    <input type="text" id="taskInput" class="form-control" placeholder="Add a new task" aria-label="Add a new task">
-                    <button class="btn btn-primary" type="button" id="addTaskButton">Add Task</button>
+        <div class="layout-container">
+            <!-- Main To-Do List -->
+            <div class="main-content">
+                <h1 class="text-center mb-4">To-Do List</h1>
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <div class="input-group mb-3">
+                            <input type="text" id="taskInput" class="form-control" placeholder="Add a new task" aria-label="Add a new task">
+                            <select id="priorityInput" class="form-select">
+                                <option value="low">Low Priority</option>
+                                <option value="medium">Medium Priority</option>
+                                <option value="high">High Priority</option>
+                            </select>
+                            <input type="date" id="dueDateInput" class="form-control">
+                            <button class="btn btn-primary" type="button" id="addTaskButton">Add Task</button>
+                        </div>
+                        <ul class="list-group mb-4" id="taskList"></ul>
+                    </div>
                 </div>
-                <ul class="list-group mb-4" id="taskList"></ul>
             </div>
-        </div>
 
-        <!--Task History-->
-        <div class="card shadow-sm mt-4">
-            <div class="card-body">
+            <!-- Task History Section -->
+            <div class="history-content">
                 <h2 class="text-center mb-3">Task History</h2>
-                <ul class="list-group" id="taskHistory"></ul>
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <ul class="list-group" id="taskHistory"></ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
